@@ -1,0 +1,44 @@
+/*Seletores de tags, alteram TODOS os elementos daquele tipo*/
+
+/* Seletor universal - mexe com todas as tags, e sobrepõe o restante das configurações */
+/* * {
+    font-family: monospace;
+    border: 1px solid black;
+} */
+
+body {
+    font-size: 22px;
+}
+
+.gray {
+    color: gray;
+}
+
+/*O parametro !important faz com que sobreponha o restante das configs*/
+p {
+    color: purple!important;
+}
+
+p {
+    color: red;
+}
+
+h1,
+h2 {
+    color: blue;
+}
+
+/*Método não convencional de alterar tag dentro de tag*/
+/* p span {
+    text-transform: uppercase;
+    background-color: gold;
+} */
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+#second {
+    font-style: italic;
+}

@@ -1,0 +1,118 @@
+/* 
+Formato de sintaxe das medias queries
+Syntax:
+@media media type and (condition: breakpoint) {
+  // CSS rules
+} */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES */
+body {
+  font: 1.5rem "Nunito", sans-serif;
+  min-height: 100vh;
+
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+main,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+}
+
+main {
+  /*Permite esse container tomar todo o espaço após os outros containers tomarem seus devidos espaços.*/
+  flex-grow: 1;
+}
+
+footer {
+  bottom: 0;
+}
+
+/*|| MEDIA QUERIES*/
+/*TELA PEQUENA - Media querie para telas igual maior 576px*/
+@media screen and (min-width: 576px) {
+  body {
+    background-color: green;
+    background-image: radial-gradient(whitesmoke, green);
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/*TELA MÉDIA*/
+@media screen and (min-width: 768px) {
+  body {
+    background-color: wheat;
+    background-image: radial-gradient(whitesmoke, wheat);
+  }
+}
+
+/*TELA GRANDE*/
+@media screen and (min-width: 992px) {
+  body {
+    background-color: skyblue;
+    background-image: radial-gradient(whitesmoke, skyblue);
+  }
+}
+
+/*XL*/
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+}
+
+/* Celular em modo paisagem */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+}

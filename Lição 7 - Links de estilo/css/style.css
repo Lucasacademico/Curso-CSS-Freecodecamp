@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Estilizando os links*/
+a {
+    text-decoration: none;
+
+    /*Alteração do formato do cursor*/
+    /* cursor: not-allowed; */
+    cursor: pointer;
+    color: hsl(207, 53%, 41%);
+}
+
+/*Classe SUDO dos links visitados*/
+a:visited {
+    color: purple;
+}
+
+/*Classe sudo dos links quando passamos o mouse em cima*/
+/*Classe sudo :focus habilita o tab sobre os links, e pode ser inserido ao lado do :hover para usar a mesma animação de hover.*/
+a:hover,
+a:focus {
+    /* color: hsl(189, 53%, 41%); */
+    color: hsl(189, 53%, 41%, 0.8);
+    background-color: aquamarine;
+}
+
+/*Classe sudo dos links quando clicamos sobre o link*/
+a:active {
+    color: red;
+}
+
+
+
+/*
+IMPORTANTE:
+- Devemos levar em consideração a ordem dos links sudo, pois pode alterar a estilização final.
+- Seguir essa estrutura sendo ensinada é um método de boa prática!
+*/

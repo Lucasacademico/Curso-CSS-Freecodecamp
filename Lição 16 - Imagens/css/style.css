@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/*Estrutura*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+/*Classes de utilidade*/
+.nowrap {
+  white-space: nowrap;
+  /*Possibilita que não junte as linhas*/
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/*Final das classes de utilidade*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: aliceblue;
+
+  /* Cria efeito de cores (nesse caso do azul pro branco. Podemos escolher pra que lado vai o efeito */
+  /* background-image: url(../img/bubbles.png),
+    linear-gradient(to left, steelblue, white); */
+
+  /* Aqui especificamos os elementos do background que vão repetir */
+  /* background-repeat: repeat-y, no-repeat;
+  background-position: right center; */
+
+  background: repeat-y right center url(../img/bubbles.png), no-repeat linear-gradient(to left, steelblue, white);
+  background-size: 20% auto;
+
+}
+
+.container {
+  background-color: wheat;
+  /* background-image: url('../img/pat1.png'); */
+  /* background-image: url('../img/pat2.png'); */
+  /* background-image: url('../img/pat2-transparency.png'); */
+  /* background-image: url('../img/scenic-2200x1331.png');*/
+  background-image: url('../img/map-2176x1451.png');
+
+  /*Repete a imagem*/
+  background-repeat: repeat;
+
+  /*Marca a posição de um background*/
+  background-position: bottom right;
+
+  /*Cobre toda a imagem no background*/
+  background-size: cover;
+}
+
+.hero {
+  /*Organizando espaço entre imagem e conteúdo*/
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.h1 {
+  font-size: 500%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px black;
+  /* background-color: hsla(0, 0%, 0%, 0.401);
+  padding: 0.25rem;
+  border-radius: 10; */
+}
+
+/*Deixa o container figure com tamanho de 35%*/
+.profile-pic-figure {
+  width: 35%;
+}
+
+/*Deixa o tamanho da imagem em 100% do container (e outras configs)*/
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double gray;
+  border-radius: 50%;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+.example img {
+  width: 25%;
+  height: auto;
+}
+
+/*Coloca imagem dentro de um texto*/
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url(../img/scenic-2200x1331.png);
+  background-size: 100%;
+
+  /*Altera a letra do texto*/
+  text-transform: uppercase;
+
+  /*Possibilita que parte dos navegadores realizem essa funcionalidade*/
+  -webkit-background-clip: text;
+  /* color: hsla(0, 0%, 0%, 0); */
+
+  /*backup pra caso do não funcionamento do webkit*/
+  background-clip: text;
+  color: transparent;
+}

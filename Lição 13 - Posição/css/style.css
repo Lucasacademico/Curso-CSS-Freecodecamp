@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed black;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+
+    /*O posicionamento relativo permite mover o elemento em relação à sua posição original*/
+    /*As propriedades top, bottom, left e right podem ser usadas para ajustar a posição do elemento a partir de onde ele originalmente estaria*/
+    position: relative;
+
+}
+
+.inner-container {
+    border: 2px solid blue;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    /* position: relative; */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: blue;
+
+    /*Esse é o posicionamento padrão para todos os elementos HTML.*/
+    /*Os elementos com posicionamento estático são renderizados no fluxo normal do documento.*/
+    /* position: static; */
+
+    /*Com o posicionamento absoluto, o elemento é removido do fluxo normal do documento e posicionado em relação ao seu contêiner pai que tem uma posição definida (relative, absolute, fixed ou sticky).*/
+    /*As propriedades top, bottom, left e right são usadas para determinar a posição do elemento em relação ao seu contêiner pai*/
+    position: absolute;
+
+    /*Deixa o bloco com 0 de espaço, e fica grudado no topo*/
+    top: 0px;
+
+    /*Deixa o bloco com 0 de espaço, e fica grudado na esquerda*/
+    left: 0px;
+
+    /*Faz com que este bloco sempre fique por cima de blocos 'fixed' que escrolamos*/
+    z-index: 1;
+}
+
+/*Se houver mais de um container como ancestral de um bloco, ele se junta ao bloco ancestral mais próximo*/
+
+.relative {
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: green;
+    position: fixed;
+    top: 100px;
+}
+
+
+.sticky {
+    background-color: black;
+
+    /*O posicionamento pegajoso é um tipo especial de posicionamento que combina comportamentos do posicionamento relativo e fixo.*/
+    /*O elemento fica no fluxo normal até alcançar um ponto de referência definido (top, bottom, left ou right) na janela de visualização, onde se comporta como fixed.*/
+    position: sticky;
+}
+
+/*Estrutura parte 2 da aula*/
+html {
+    /*scroll-behavior - Cria animação de scroll*/
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+header,
+footer {
+    color: white;
+    text-align: center;
+    height: 100px;
+    /* font-size: 5rem; */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer {
+    background-color: black;
+    position: sticky;
+    bottom: 0;
+    font-size: 3rem;
+}
+
+a:visited {
+    color: white;
+}
+
+.social {
+    background-color: royalblue;
+    color: white;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+}

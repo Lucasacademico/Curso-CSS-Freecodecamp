@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+}
+
+/*Cria 4 colunas na section com a classe 'colunas'. OBS: colunas são responsívas!!*/
+.colunas {
+    /*Separa os 4 paragrafos em 4 colunas*/
+    /* column-count: 4; */
+
+    /*Cria uma largura da coluna - MINIMO 250px*/
+    /* column-width: 250px; */
+
+    /*Configuração que aborda as duas configs acima*/
+    columns: 4 250px;
+
+    /*Cria um separador de colunas*/
+    column-rule: 3px solid black;
+
+    /*Cria espaçamento entre colunas*/
+    column-gap: 3rem;
+
+}
+
+.colunas P {
+    margin-top: 0;
+}
+
+.colunas h2 {
+    margin-top: 0;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+
+    /*Evita dividir um bloco entre duas colunas*/
+    break-inside: avoid;
+
+    /*instrui o navegador a iniciar uma nova coluna antes desse elemento, se houver espaço disponível.*/
+    break-before: column;
+}
+
+/*estrutura da citação*/
+.colunas .citacao {
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin-top: 2rem;
+
+    /*Faz a citação ficar no meio das colunas, criando um destaque*/
+    column-span: all;
+}
+
+/*Estrutura criada para realizar o wrap do texto*/
+.nao-pula {
+    white-space: nowrap;
+}

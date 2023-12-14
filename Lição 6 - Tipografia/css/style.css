@@ -1,0 +1,47 @@
+/*
+Tipografia é a maneira que o texto é arranjado e apresentado
+*/
+
+/*Estilização do Body*/
+body {
+    padding: 10%;
+    font-size: 2rem;
+
+}
+
+/*Fonts do input e button herdando*/
+/* input, button {
+    font: inherit;
+} */
+
+/*Estruturas de tipografia*/
+p {
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: none; */
+    /* text-transform: capitalize; */
+    /* text-transform: lowercase; */
+    /* text-align: right; */
+    /* text-align: center; */
+    /* text-indent: 1em; */
+    line-height: 1.5;
+    /* letter-spacing: 0.1; */
+    /* word-spacing: 0.5em; */
+    /* font-weight: 900; */
+    /* font-weight: bold; */
+    /* font-weight: lighter; */
+    /* font-weight: bolder; */
+    /* font-style: italic; */
+    /* font-style: oblique; */
+    /* font-style: normal; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: sans-serif; */
+    /* font-family: monospace; */
+    /* font-family: cursive; */
+    /* font-family: fantasy; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*..... e muitos outros*/
+}

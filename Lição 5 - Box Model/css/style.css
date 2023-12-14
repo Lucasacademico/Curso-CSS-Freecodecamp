@@ -1,0 +1,63 @@
+/*Zerando margins e paddings da página (não dos containers)*/
+* {
+    margin: 0;
+    padding: 0;
+    /*Box sizinho diz que o tamanho do conteúdo não inclui alterações do padding, e sempre será o padrão da width/height do elemento sem contar o restante da box model*/
+    /* box-sizing: content-box; */
+
+    /*Utilizando border box, faz com que o tamanho width/height do elemento levem em consideração também o padding, modo mais utilizado*/
+    box-sizing: border-box;
+}
+
+/* h1 {
+    border: 2px dashed red;
+    width: 400px;
+    font-size: 3rem;
+    padding: 0.5em;
+} */
+
+.container {
+    border: 10px double red;
+    /* border-top: 5px solid;
+    border-right: 10px dotted; */
+    font-size: 1.5rem;
+    /* margin-top: 1.5em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 2em; */
+    /* margin: 1.5em 2em 3em 4em;  */
+    margin: 1.5em;
+    padding: 1.5em;
+    outline: 5px solid purple;
+    outline-offset: 5px;
+    /*Espaço do outline pra borda - valores negativos entram*/
+    /*Não é calculado no boxmodel*/
+}
+
+.circle {
+    margin: 3rem auto;
+    /*Coloca no meio o 'auto'*/
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
+
+/*Sobre o 'rem' e 'em'
+- o tamanho de 1 rem é igual 16px
+- rem é o tamanho 'raiz' de uma fonte que escolhemos
+- o em é sempre o tamanho relativo ao rem, podemos adereçar isso ao margin e padding, para configurar a box model de uma maneira que faça sentido
+*/
+
+/*Toda alteração de tamanhos realizadas no CSS geralmente afeta as margens e paddings dos containers*/
+/*Para análise do box model precisamos entender o conceito de container, e como o margin, padding afetam a estrutura.*/
+/*Uma maneira de análisar um box model de um elemento é inspecionando a página, e clicando sobre o elemento.*/
+/*Estruturas do Box model
+- Conteúdo, o tamanho do conteúdo no container.
+- Padding é a distância do conteúdo até a borda interna do container
+- Border, porém o seu tamanha geralmente é minimo
+- Margin é a distância do container até a borda da janela (ou container raiz)
+*/
