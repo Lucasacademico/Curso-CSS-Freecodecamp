@@ -17,7 +17,7 @@ body {
     columns: 4 250px;
 
     /*Cria um separador de colunas*/
-    column-rule: 3px solid black;
+    column-rule: 3px solid rgb(160, 34, 34);
 
     /*Cria espaçamento entre colunas*/
     column-gap: 3rem;

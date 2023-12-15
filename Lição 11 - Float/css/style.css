@@ -5,6 +5,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+section {
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 1rem;
+
+    /*Faz com que o bloco float e o bloco da section se mantenham unidos. Modo em desuso*/
+    /* overflow: auto; */
+
+    /*Maneira atual do container section conter o conteiner div do float.*/
+    display: flow-root;
+}
+
 /*Cria um bloco para a div float*/
 .block {
     width: 30vw;
@@ -29,16 +41,4 @@ body {
 /*o CLEAR serve para que os elementos floats não aproveitem mais de um paragrafo ao lado dos blocos floats*/
 .clear {
     clear: both;
-}
-
-section {
-    background-color: bisque;
-    border: 1px solid black;
-    padding: 1rem;
-
-    /*Faz com que o bloco float e o bloco da section se mantenham unidos. Modo em desuso*/
-    /* overflow: auto; */
-
-    /*Maneira atual do container section conter o conteiner div do float.*/
-    display: flow-root;
 }
